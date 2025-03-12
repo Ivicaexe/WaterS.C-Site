@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Water S.C. - Partner za očuvanje vode kroz inovativna i održiva rešenja.">
+    <meta name="keywords" content="očuvanje vode, konsultacije za vodne resurse, detekcija curenja, održiva rešenja">
+    <meta property="og:url" content="https://www.watersc.rs">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Water S.C. - Očuvanje vode">
+    <meta property="og:description" content="Inovativna rešenja za upravljanje vodnim resursima.">
+    <meta property="og:image" content="images/logo.png">
+    <title>Water S.C. - Partner za očuvanje vode</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-bg-dark text-text-light">
+    <!-- Water Background -->
+    <div class="water-background"></div>
+    <div class="water-overlay">
+        <div class="water-wave"></div>
+        <div class="water-wave"></div>
+        <div class="water-wave"></div>
+        <div class="water-wave"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-bg-dark bg-opacity-90 backdrop-filter backdrop-blur-lg shadow-md">
+        <div class="container mx-auto px-4 py-2">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <div class="logo-container mr-4">
+                        <img src="images/logo.png" alt="Water S.C. Logo" class="logo-image" loading="lazy" onerror="this.src='https://via.placeholder.com/200x90?text=Logo';">
+                    </div>
+                    <h1 class="text-2xl font-bold text-primary-color">Water S.C.</h1>
+                </div>
+                <div class="lg:hidden flex items-center">
+                    <button id="mobile-menu-button" class="p-2 focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+                <nav class="hidden lg:flex items-center space-x-8">
+                    <a href="#home" class="navbar-item active-tab py-2 text-primary-color font-medium" data-key="home">Početna</a>
+                    <a href="#about" class="navbar-item py-2 hover:text-primary-color transition-colors" data-key="about">O nama</a>
+                    <a href="#services" class="navbar-item py-2 hover:text-primary-color transition-colors" data-key="services">Usluge</a>
+                    <a href="#how-we-work" class="navbar-item py-2 hover:text-primary-color transition-colors" data-key="how_we_work">Kako radimo</a>
+                    <a href="#terrain" class="navbar-item py-2 hover:text-primary-color transition-colors" data-key="terrain">Teren</a>
+                    <a href="#contact" class="navbar-item py-2 hover:text-primary-color transition-colors" data-key="contact">Kontakt</a>
+                </nav>
+                <div class="hidden lg:flex items-center space-x-4">
+                    <div class="text-sm">
+                        <span class="font-medium" data-key="hours">Radno vreme:</span>
+                        <span>08:00-21:00</span>
+                        <span class="ml-2 text-secondary-color font-medium" data-key="emergency">Hitni slučajevi: 24/7</span>
+                    </div>
+                    <div class="language-dropdown">
+                        <button class="flex items-center space-x-1 p-2 rounded-full hover:bg-gray-800">
+                            <span class="current-language">SR</span>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="language-options">
+                            <button class="block w-full text-left px-4 py-2 hover:bg-gray-800 language-option" data-lang="sr">Srpski</button>
+                            <button class="block w-full text-left px-4 py-2 hover:bg-gray-800 language-option" data-lang="en">English</button>
+                            <button class="block w-full text-left px-4 py-2 hover:bg-gray-800 language-option" data-lang="de">Deutsch</button>
+                        </div>
+                    </div>
+                    <div class="flex space-x-2">
+                        <a href="#" class="p-2 rounded-full hover:bg-gray-800 transition-colors" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in text-primary-color"></i>
+                        </a>
+                        <a href="#" class="p-2 rounded-full hover:bg-gray-800 transition-colors" aria-label="Instagram">
+                            <i class="fab fa-instagram text-pink-400"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden lg:hidden bg-bg-dark pb-4 px-4">
+            <nav class="flex flex-col space-y-3 pt-3 border-t border-gray-700">
+                <a href="#home" class="py-2 text-primary-color font-medium" data-key="home">Početna</a>
+                <a href="#about" class="py-2 hover:text-primary-color transition-colors" data-key="about">O nama</a>
+                <a href="#services" class="py-2 hover:text-primary-color transition-colors" data-key="services">Usluge</a>
+                <a href="#how-we-work" class="py-2 hover:text-primary-color transition-colors" data-key="how_we_work">Kako radimo</a>
+                <a href="#terrain" class="py-2 hover:text-primary-color transition-colors" data-key="terrain">Teren</a>
+                <a href="#contact" class="py-2 hover:text-primary-color transition-colors" data-key="contact">Kontakt</a>
+            </nav>
+            <div class="mt-4 pt-3 border-t border-gray-700">
+                <div class="mb-3">
+                    <p class="font-medium" data-key="hours">Radno vreme:</p>
+                    <p>08:00-21:00</p>
+                    <p class="text-secondary-color font-medium" data-key="emergency">Hitni slučajevi: 24/7</p>
+                </div>
+                <div class="flex justify-between items-center">
+                    <div class="flex space-x-2">
+                        <button class="px-3 py-1 rounded bg-gray-800 language-option" data-lang="sr">SR</button>
+                        <button class="px-3 py-1 rounded bg-gray-800 language-option" data-lang="en">EN</button>
+                        <button class="px-3 py-1 rounded bg-gray-800 language-option" data-lang="de">DE</button>
+                    </div>
+                    <div class="flex space-x-3">
+                        <a href="#" class="p-2 rounded-full hover:bg-gray-800 transition-colors" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in text-primary-color"></i>
+                        </a>
+                        <a href="#" class="p-2 rounded-full hover:bg-gray-800 transition-colors" aria-label="Instagram">
+                            <i class="fab fa-instagram text-pink-400"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="py-16 md:py-24 px-4 relative overflow-hidden">
+        <div class="container mx-auto max-w-6xl">
+            <div class="flex flex-col md:flex-row items-center justify-between">
+                <div class="md:w-1/2 mb-12 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-primary-color dark:text-secondary-color" data-key="welcome">
+                        Dobrodošli u<br>
+                        <span class="text-accent-color">Water S.C.</span>
+                    </h1>
+                    <p class="text-xl md:text-2xl mb-8 text-text-dark dark:text-text-light" data-key="tagline">
+                        Partner za očuvanje vode kroz inovativna i održiva rešenja
+                    </p>
+                    <picture>
+                        <source srcset="images/slika1.png" type="image/png">
+                        <img src="images/slika1.png" alt="Slika za Hero sekciju" class="section-image" loading="lazy" onerror="this.src='https://via.placeholder.com/800x600?text=Hero+Image';">
+                    </picture>
+                    <a href="#contact" class="inline-block px-8 py-4 bg-primary-color hover:bg-secondary-color dark:bg-secondary-color dark:hover:bg-primary-color text-white rounded-lg shadow-lg transition-transform transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-primary-color focus:ring-opacity-50" data-key="contact_us">
+                        Kontaktirajte nas
+                    </a>
+                </div>
+                <div class="md:w-1/2 relative">
+                    <div class="relative w-full h-96 rounded-lg overflow-hidden shadow-2xl">
+                        <div class="absolute inset-0 bg-gradient-to-r from-primary-color to-secondary-color opacity-80"></div>
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="text-center text-white p-8">
+                                <h3 class="text-3xl font-bold mb-4" data-key="our_services">Naše usluge</h3>
+                                <ul class="space-y-3 text-lg">
+                                    <li class="flex items-center"><span class="mr-2">✓</span> <span data-key="service1">Konsultacije za uštedu vode</span></li>
+                                    <li class="flex items-center"><span class="mr-2">✓</span> <span data-key="service2">Sistemi za detekciju curenja</span></li>
+                                    <li class="flex items-center"><span class="mr-2">✓</span> <span data-key="service3">Edukativni programi</span></li>
+                                    <li class="flex items-center"><span class="mr-2">✓</span> <span data-key="service4">Terenski servis 24/7</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 px-4 bg-bg-dark relative overflow-hidden animate-on-scroll">
+        <div class="container mx-auto max-w-6xl relative z-10">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center section-heading" data-key="about_us">O nama</h2>
+            <div class="section-content grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="section-text md:order-2">
+                    <p class="text-xl mb-12 max-w-3xl mx-auto" data-key="mission">
+                        Naša misija je očuvanje globalnih izvora vode kroz inovativna rešenja i odgovorno upravljanje.
+                    </p>
+                    <div class="grid md:grid-cols-2 gap-12">
+                        <div class="bg-gray-900 rounded-xl shadow-lg p-8 transform transition-transform hover:scale-105">
+                            <h3 class="text-2xl font-semibold mb-4 text-primary-color" data-key="our_story">Naša priča</h3>
+                            <p class="mb-4" data-key="story_p1">
+                                Water S.C. je osnovan s jasnim ciljem - da transformiše način na koji industrije i zajednice pristupaju upravljanju vodnim resursima. Naš fokus je na održivosti, inovaciji i odgovornom korišćenju vode.
+                            </p>
+                            <p data-key="story_p2">
+                                Verujemo da kroz edukaciju, implementaciju naprednih sistema i saradnju sa zajednicama možemo napraviti značajnu razliku u očuvanju najvažnijeg resursa na planeti.
+                            </p>
+                        </div>
+                        <div class="bg-gray-900 rounded-xl shadow-lg p-8 transform transition-transform hover:scale-105">
+                            <h3 class="text-2xl font-semibold mb-4 text-primary-color" data-key="our_goals">Naši ciljevi</h3>
+                            <ul class="space-y-3">
+                                <li class="flex items-start">
+                                    <span class="text-primary-color mr-2">•</span>
+                                    <span data-key="goal1">Edukacija organizacija i zajednica o odgovornom korišćenju vode</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-primary-color mr-2">•</span>
+                                    <span data-key="goal2">Implementacija inovativnih sistema za uštedu vode i detekciju curenja</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-primary-color mr-2">•</span>
+                                    <span data-key="goal3">Razvoj održivih rešenja prilagođenih specifičnim potrebama klijenata</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-primary-color mr-2">•</span>
+                                    <span data-key="goal4">Smanjenje globalnog vodnog otiska kroz proaktivne mere očuvanja</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-image-div md:order-1">
+                    <picture>
+                        <source srcset="images/slika2.jpg" type="image/jpg">
+                        <img src="images/slika2.jpg" alt="Slika za O nama sekciju" class="section-image" loading="lazy" onerror="this.src='https://via.placeholder.com/600x400?text=O+nama';">
+                    </picture>
+                </div>
+            </div>
+            <div class="mt-16">
+                <h3 class="text-2xl font-semibold mb-8 text-center text-primary-color" data-key="our_values">Naše vrednosti</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="bg-gray-900 rounded-lg shadow-lg p-6 text-center transform transition-transform hover:scale-105">
+                        <div class="text-primary-color text-3xl mb-3">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h4 class="text-xl font-medium mb-2" data-key="value1_title">Inovacija</h4>
+                        <p class="text-gray-400" data-key="value1_desc">
+                            Kontinuirano tragamo za novim i boljim načinima očuvanja vode
+                        </p>
+                    </div>
+                    <div class="bg-gray-900 rounded-lg shadow-lg p-6 text-center transform transition-transform hover:scale-105">
+                        <div class="text-secondary-color text-3xl mb-3">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <h4 class="text-xl font-medium mb-2" data-key="value2_title">Održivost</h4>
+                        <p class="text-gray-400" data-key="value2_desc">
+                            Sva naša rešenja su dugoročno održiva za planetu i poslovanje
+                        </p>
+                    </div>
+                    <div class="bg-gray-900 rounded-lg shadow-lg p-6 text-center transform transition-transform hover:scale-105">
+                        <div class="text-accent-color text-3xl mb-3">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h4 class="text-xl font-medium mb-2" data-key="value3_title">Partnerstvo</h4>
+                        <p class="text-gray-400" data-key="value3_desc">
+                            Sarađujemo sa našim klijentima kao partneri u misiji očuvanja vode
+                        </p>
+                    </div>
+                    <div class="bg-gray-900 rounded-lg shadow-lg p-6 text-center transform transition-transform hover:scale-105">
+                        <div class="text-purple-500 text-3xl mb-3">
+                            <i class="fas fa-balance-scale"></i>
+                        </div>
+                        <h4 class="text-xl font-medium mb-2" data-key="value4_title">Integritet</h4>
+                        <p class="text-gray-400" data-key="value4_desc">
+                            Poslujemo sa najvišim standardima etičke i profesionalne prakse
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Global Challenges Section -->
+    <section id="global-challenges" class="py-16 px-4 relative overflow-hidden animate-on-scroll">
+        <div class="container mx-auto max-w-6xl relative z-10">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center section-heading" data-key="global_challenges">Globalni izazovi u očuvanju vode – Ključne tačke za promišljanje</h2>
+            <div class="section-content grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="section-image-div md:order-1">
+                    <picture>
+                        <source srcset="images/global-water.png" type="image/png">
+                        <img src="images/global-water.png" alt="Globalni izazovi očuvanja vode" class="section-image" loading="lazy" onerror="this.src='https://via-placeholder.com/600x400?text=Globalni+Izazovi';">
+                    </picture>
+                </div>
+                <div class="section-text md:order-2">
+                    <p class="text-xl mb-6 text-text-dark dark:text-text-light" data-key="global_intro">"Voda je osnova života, ali globalni izazovi ugrožavaju njenu dostupnost i kvalitet. Kroz analizu ključnih problema, Water S.C. osvetljava važnost održivih rešenja."</p>
+                    <ul class="space-y-4 text-lg text-gray-400">
+                        <li class="flex items-start"><span class="text-primary-color mr-2">•</span><span data-key="challenge1">Klimatske promene i njihov uticaj na zalihe vode</span></li>
+                        <li class="flex items-start"><span class="text-primary-color mr-2">•</span><span data-key="challenge2">Problem zastarele infrastrukture i gubitka vode</span></li>
+                        <li class="flex items-start"><span class="text-primary-color mr-2">•</span><span data-key="challenge3">Nedovoljna edukacija i svest o upravljanju resursima</span></li>
+                        <li class="flex items-start"><span class="text-primary-color mr-2">•</span><span data-key="challenge4">Važnost lokalno prilagođenih rešenja</span></li>
+                    </ul>
+                    <div class="mt-8">
+                        <a href="#services" class="inline-block px-6 py-3 bg-primary-color hover:bg-secondary-color text-white rounded-lg shadow transition-colors" data-key="global_cta">Saznajte više o našim uslugama i kako možemo pomoći u rešavanju ovih izazova!</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 px-4 relative overflow-hidden animate-on-scroll">
+        <div class="container mx-auto max-w-6xl relative z-10">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center section-heading" data-key="our_services">Naše usluge</h2>
+            <div class="section-content grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="section-image-div md:order-1">
+                    <picture>
+                        <source srcset="images/slika3.jpg" type="image/jpg">
+                        <img src="images/slika3.jpg" alt="Slika za Usluge sekciju" class="section-image" loading="lazy" onerror="this.src='https://via.placeholder.com/600x400?text=Usluge';">
+                    </picture>
+                </div>
+                <div class="section-text md:order-2">
+                    <p class="text-xl mb-16 max-w-3xl mx-auto" data-key="services_intro">
+                        Pružamo sveobuhvatna rešenja za upravljanje vodnim resursima, prilagođena specifičnim potrebama naših klijenata.
+                    </p>
+                    <div class="grid md:grid-cols-3 gap-8">
+                        <div class="bg-gray-900 rounded-xl shadow-lg p-6 border-t-4 border-primary-color transform transition-all hover:-translate-y-2 hover:shadow-xl">
+                            <div class="text-primary-color text-4xl mb-4">
+                                <i class="fas fa-tint"></i>
+                            </div>
+                            <h3 class="text-2xl font-semibold mb-4" data-key="service_title1">Konsultacije za uštedu vode</h3>
+                            <p class="mb-4" data-key="service_desc1">
+                                Stručni saveti za optimizaciju potrošnje vode u vašem poslovanju ili zajednici.
+                            </p>
+                            <ul class="space-y-2 text-gray-400">
+                                <li class="flex items-start">
+                                    <span class="text-primary-color mr-2 text-sm">•</span>
+                                    <span data-key="service1_point1">Analiza trenutne potrošnje vode</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-primary-color mr-2 text-sm">•</span>
+                                    <span data-key="service1_point2">Identifikacija prilika za uštedu</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-primary-color mr-2 text-sm">•</span>
+                                    <span data-key="service1_point3">Razvoj strategija za smanjenje potrošnje</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-primary-color mr-2 text-sm">•</span>
+                                    <span data-key="service1_point4">Ekonomska analiza i povrat investicije</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="bg-gray-900 rounded-xl shadow-lg p-6 border-t-4 border-accent-color transform transition-all hover:-translate-y-2 hover:shadow-xl">
+                            <div class="text-accent-color text-4xl mb-4">
+                                <i class="fas fa-tools"></i>
+                            </div>
+                            <h3 class="text-2xl font-semibold mb-4" data-key="service_title2">Sistemi za detekciju curenja</h3>
+                            <p class="mb-4" data-key="service_desc2">
+                                Implementacija naprednih sistema za rano otkrivanje i prevenciju gubitaka vode.
+                            </p>
+                            <ul class="space-y-2 text-gray-400">
+                                <li class="flex items-start">
+                                    <span class="text-accent-color mr-2 text-sm">•</span>
+                                    <span data-key="service2_point1">Instalacija senzora za detekciju curenja</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-accent-color mr-2 text-sm">•</span>
+                                    <span data-key="service2_point2">Sistemi za monitoring u realnom vremenu</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-accent-color mr-2 text-sm">•</span>
+                                    <span data-key="service2_point3">Automatsko obaveštavanje o anomalijama</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-accent-color mr-2 text-sm">•</span>
+                                    <span data-key="service2_point4">Redovno održavanje i kalibracija</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="bg-gray-900 rounded-xl shadow-lg p-6 border-t-4 border-secondary-color transform transition-all hover:-translate-y-2 hover:shadow-xl">
+                            <div class="text-secondary-color text-4xl mb-4">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <h3 class="text-2xl font-semibold mb-4" data-key="service_title3">Edukativni programi</h3>
+                            <p class="mb-4" data-key="service_desc3">
+                                Podizanje svesti i edukacija o značaju očuvanja vode i održivom upravljanju.
+                            </p>
+                            <ul class="space-y-2 text-gray-400">
+                                <li class="flex items-start">
+                                    <span class="text-secondary-color mr-2 text-sm">•</span>
+                                    <span data-key="service3_point1">Treninzi za zaposlene i menadžment</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-secondary-color mr-2 text-sm">•</span>
+                                    <span data-key="service3_point2">Obrazovni programi za zajednice</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-secondary-color mr-2 text-sm">•</span>
+                                    <span data-key="service3_point3">Materijali za podizanje svesti</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-secondary-color mr-2 text-sm">•</span>
+                                    <span data-key="service3_point4">Radionice o najboljim praksama</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How We Work Section -->
+    <section id="how-we-work" class="py-16 px-4 bg-bg-dark relative overflow-hidden animate-on-scroll">
+        <div class="container mx-auto max-w-6xl relative z-10">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center section-heading" data-key="how_we_work">Kako radimo</h2>
+            <div class="section-content grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="section-image-div md:order-1">
+                    <picture>
+                        <source srcset="images/slika4.jpg" type="image/jpg">
+                        <img src="images/slika4.jpg" alt="Slika za Kako radimo sekciju" class="section-image" loading="lazy" onerror="this.src='https://via.placeholder.com/600x400?text=Kako+radimo';">
+                    </picture>
+                </div>
+                <div class="section-text md:order-2">
+                    <p class="text-xl mb-16 max-w-3xl mx-auto" data-key="how_we_work_intro">
+                        Naš proces je jednostavan, transparentan i fokusiran na postizanje konkretnih rezultata za naše klijente.
+                    </p>
+                    <div class="grid md:grid-cols-4 gap-8">
+                        <div class="relative">
+                            <div class="rounded-full h-20 w-20 flex items-center justify-center bg-primary-color text-white text-3xl font-bold mb-6 mx-auto shadow-lg z-10 relative">
+                                1
+                            </div>
+                            <div class="hidden md:block h-0.5 bg-primary-color absolute top-10 left-1/2 w-full"></div>
+                            <div class="text-center">
+                                <h3 class="text-xl font-semibold mb-3 text-primary-color" data-key="step1_title">Analiza</h3>
+                                <p class="text-gray-400" data-key="step1_desc">
+                                    Detaljna procena trenutne potrošnje vode i identifikacija prilika za poboljšanje.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="relative">
+                            <div class="rounded-full h-20 w-20 flex items-center justify-center bg-primary-color text-white text-3xl font-bold mb-6 mx-auto shadow-lg z-10 relative">
+                                2
+                            </div>
+                            <div class="hidden md:block h-0.5 bg-primary-color absolute top-10 left-1/2 w-full"></div>
+                            <div class="text-center">
+                                <h3 class="text-xl font-semibold mb-3 text-primary-color" data-key="step2_title">Predlog rešenja</h3>
+                                <p class="text-gray-400" data-key="step2_desc">
+                                    Razvoj prilagođenih rešenja koja odgovaraju vašim specifičnim potrebama i ciljevima.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="relative">
+                            <div class="rounded-full h-20 w-20 flex items-center justify-center bg-primary-color text-white text-3xl font-bold mb-6 mx-auto shadow-lg z-10 relative">
+                                3
+                            </div>
+                            <div class="hidden md:block h-0.5 bg-primary-color absolute top-10 left-1/2 w-full"></div>
+                            <div class="text-center">
+                                <h3 class="text-xl font-semibold mb-3 text-primary-color" data-key="step3_title">Implementacija</h3>
+                                <p class="text-gray-400" data-key="step3_desc">
+                                    Stručna implementacija odabranih rešenja sa minimalnim prekidom vašeg poslovanja.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="relative">
+                            <div class="rounded-full h-20 w-20 flex items-center justify-center bg-primary-color text-white text-3xl font-bold mb-6 mx-auto shadow-lg z-10 relative">
+                                4
+                            </div>
+                            <div class="text-center">
+                                <h3 class="text-xl font-semibold mb-3 text-primary-color" data-key="step4_title">Podrška i nadzor</h3>
+                                <p class="text-gray-400" data-key="step4_desc">
+                                    Kontinuirana podrška i praćenje rezultata kako bi se obezbedili dugoročni pozitivni efekti.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Terrain Section -->
+    <section id="terrain" class="py-16 px-4 relative overflow-hidden animate-on-scroll">
+        <div class="container mx-auto max-w-6xl relative z-10">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center section-heading" data-key="terrain">Teren</h2>
+            <div class="section-content grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="section-image-div md:order-1">
+                    <picture>
+                        <source srcset="images/slika5.jpg" type="image/jpg">
+                        <img src="images/slika5.jpg" alt="Slika za Teren sekciju" class="section-image" loading="lazy" onerror="this.src='https://via.placeholder.com/600x400?text=Teren';">
+                    </picture>
+                </div>
+                <div class="section-text md:order-2">
+                    <p class="text-lg mb-6" data-key="terrain_desc">
+                        Terenski rad je ključna komponenta našeg pristupa očuvanju resursa. Kroz pažljivo planiranje i stručnost,
+                        ostvarujemo dugoročne rezultate za poboljšanje vodovodnih sistema. Vaša voda je na sigurnom sa nama.
+                    </p>
+                    <p class="text-lg font-medium text-primary-color mb-8" data-key="terrain_vehicles">
+                        Naša terenska vozila opremljena za brzo i efikasno rešavanje problema na terenu
+                    </p>
+                    <div class="bg-gray-900 p-6 rounded-lg border-l-4 border-primary-color">
+                        <h3 class="text-xl font-semibold mb-3" data-key="ready_to_improve">Spremni ste da unapredite upravljanje vodnim resursima?</h3>
+                        <p class="mb-4" data-key="contact_today">
+                            Kontaktirajte nas danas i saznajte kako Water S.C. može pomoći vašem poslovanju ili zajednici.
+                        </p>
+                        <a href="#contact" class="inline-block px-6 py-3 bg-primary-color hover:bg-secondary-color text-white rounded-lg shadow transition-colors" data-key="start_today">
+                            Započnite danas
+                        </a>
+                    </div>
+                    <div class="terrain-image-container mt-6">
+                        <picture>
+                            <source srcset="images/WaterS.Cvozilo.jpg" type="image/jpg">
+                            <img src="images/WaterS.Cvozilo.jpg" alt="Terensko vozilo Water S.C." class="w-full h-auto rounded-xl shadow-xl" loading="lazy" onerror="this.src='https://via.placeholder.com/600x400?text=Vozilo';">
+                        </picture>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 px-4 bg-bg-dark relative overflow-hidden animate-on-scroll">
+        <div class="container mx-auto max-w-6xl relative z-10">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center section-heading" data-key="contact">Kontaktirajte nas</h2>
+            <div class="section-content grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="section-image-div md:order-1">
+                    <picture>
+                        <source srcset="images/slika6.png" type="image/png">
+                        <img src="images/slika6.png" alt="Slika za Kontakt sekciju" class="section-image" loading="lazy" onerror="this.src='https://via.placeholder.com/600x400?text=Kontakt';">
+                    </picture>
+                </div>
+                <div class="section-text md:order-2">
+                    <p class="text-xl mb-16 max-w-3xl mx-auto" data-key="contact_intro">
+                        Imate pitanje ili ste spremni da započnete saradnju? Kontaktirajte nas i odgovorićemo vam u najkraćem mogućem roku.
+                    </p>
+                    <div class="grid md:grid-cols-2 gap-12">
+                        <div>
+                            <form class="bg-gray-900 rounded-xl shadow-lg p-8">
+                                <div class="mb-6">
+                                    <label for="name" class="block text-sm font-medium mb-2" data-key="name">Ime i prezime</label>
+                                    <input type="text" id="name" class="w-full px-4 py-3 border border-gray-700 rounded-lg focus:ring-2 focus:ring-primary-color focus:border-primary-color bg-gray-800 text-base" required>
+                                </div>
+                                <div class="mb-6">
+                                    <label for="email" class="block text-sm font-medium mb-2" data-key="email">Email adresa</label>
+                                    <input type="email" id="email" class="w-full px-4 py-3 border border-gray-700 rounded-lg focus:ring-2 focus:ring-primary-color focus:border-primary-color bg-gray-800 text-base" required>
+                                </div>
+                                <div class="mb-6">
+                                    <label for="subject" class="block text-sm font-medium mb-2" data-key="subject">Naslov</label>
+                                    <input type="text" id="subject" class="w-full px-4 py-3 border border-gray-700 rounded-lg focus:ring-2 focus:ring-primary-color focus:border-primary-color bg-gray-800 text-base">
+                                </div>
+                                <div class="mb-6">
+                                    <label for="message" class="block text-sm font-medium mb-2" data-key="message">Poruka</label>
+                                    <textarea id="message" rows="5" class="w-full px-4 py-3 border border-gray-700 rounded-lg focus:ring-2 focus:ring-primary-color focus:border-primary-color bg-gray-800 text-base" required></textarea>
+                                </div>
+                                <button type="submit" class="w-full py-3 px-6 bg-primary-color hover:bg-secondary-color text-white rounded-lg shadow transition-colors" data-key="send_message">
+                                    Pošalji poruku
+                                </button>
+                            </form>
+                        </div>
+                        <div>
+                            <div class="bg-gray-900 rounded-xl shadow-lg p-8 h-full">
+                                <h3 class="text-2xl font-semibold mb-6 text-primary-color" data-key="contact_info">Kontakt informacije</h3>
+                                <div class="space-y-6">
+                                    <div>
+                                        <h4 class="text-lg font-medium mb-2" data-key="email_title">Email</h4>
+                                        <p class="flex items-center">
+                                            <i class="fas fa-envelope text-primary-color mr-3"></i>
+                                            <a href="mailto:rs.watersc@gmail.com" class="hover:text-primary-color transition-colors">rs.watersc@gmail.com</a>
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-lg font-medium mb-2" data-key="phone_title">Telefon</h4>
+                                        <p class="flex items-center">
+                                            <i class="fas fa-phone-alt text-primary-color mr-3"></i>
+                                            <a href="tel:+381659055000" class="hover:text-primary-color transition-colors">+381 65 9055000</a>
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-lg font-medium mb-2" data-key="hours_title">Radno vreme</h4>
+                                        <p class="flex items-center mb-2">
+                                            <i class="far fa-clock text-primary-color mr-3"></i>
+                                            <span>08:00-21:00</span>
+                                        </p>
+                                        <p class="flex items-center text-secondary-color font-medium">
+                                            <i class="fas fa-exclamation-circle text-secondary-color mr-3"></i>
+                                            <span data-key="emergency_service">Hitni slučajevi: 24/7</span>
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-lg font-medium mb-2" data-key="follow_us">Pratite nas</h4>
+                                        <div class="flex space-x-4">
+                                            <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-primary-color hover:bg-gray-700 transition-colors">
+                                                <i class="fab fa-linkedin-in"></i>
+                                            </a>
+                                            <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-pink-400 hover:bg-gray-700 transition-colors">
+                                                <i class="fab fa-instagram"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mt-10 border-t border-gray-700 pt-6">
+                                    <p class="text-lg font-medium mb-4" data-key="mission_statement">Zajedno možemo sačuvati najvažniji resurs na Zemlji</p>
+                                    <p class="text-gray-400" data-key="join_mission">Pridružite nam se u misiji održivog upravljanja vodom</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 px-4 bg-bg-dark text-white">
+        <div class="container mx-auto max-w-6xl">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <div class="flex items-center">
+                        <div class="logo-container mr-2">
+                            <img src="images/logo.png" alt="Water S.C. Logo" class="logo-image" loading="lazy" onerror="this.src='https://via-placeholder.com/200x90?text=Logo';">
+                        </div>
+                        <span class="text-2xl font-bold">Water S.C.</span>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Brzi linkovi</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="hover:text-primary-color">Početna</a></li>
+                        <li><a href="#services" class="hover:text-primary-color">Usluge</a></li>
+                        <li><a href="#contact" class="hover:text-primary-color">Kontakt</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <p><a href="#privacy" class="hover:text-primary-color">Politika privatnosti</a> | <a href="#terms" class="hover:text-primary-color">Uslovi korišćenja</a></p>
+                    <p class="mt-2">© 2025 Water S.C. Sva prava zadržana.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
